@@ -1,0 +1,24 @@
+{
+  "name": "lf2screeps",
+  "version": "1.0.0",
+  "description": "I play Screeps",
+  "private": true,
+  "scripts": {
+    "build": "npx gulp build",
+    "commit": "npx gulp commit",
+    "publish": "npx gulp publish"
+  },
+  "keywords": [],
+  "author": "IplayLF2",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "*",
+    "@types/screeps": "*",
+    "gulp": "*",
+    "typescript": "*",
+    "tslib": "*",
+    "rollup": "*",
+    "rollup-plugin-typescript": "*",
+    "node-fetch": "*"
+  }
+}
