@@ -19,6 +19,7 @@
     "tslib": "*",
     "rollup": "*",
     "rollup-plugin-typescript": "*",
+    "minify": "*",
     "node-fetch": "*"
   }
 }

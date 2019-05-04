@@ -1,7 +1,10 @@
 const rollup = require("rollup");
 const rollupTypescript = require("rollup-plugin-typescript");
+const minify = require("minify");
 const fs = require("fs");
 const fetch = require("node-fetch");
+
+const outFile = "./dist/main.js";
 
 const build = async function() {
   const bundle = await rollup.rollup({
@@ -10,13 +13,16 @@ const build = async function() {
   });
 
   await bundle.write({
-    file: "dist/main.js",
+    file: outFile,
     format: "cjs"
   });
+
+  // const result = await minify(outFile);
+  // await fs.writeFileSync(outFile, result);
 };
 
 const commit = async function() {
-  const content = await fs.readFileSync("./dist/main.js", {
+  const content = await fs.readFileSync(outFile, {
     encoding: "utf8"
   });
 

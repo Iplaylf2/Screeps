@@ -1,4 +1,7 @@
-import foo from "./foo/foo";
+import PropertyRoot from "./PropertyRoot";
+
 export const loop = function() {
-  foo();
+  for (const room of PropertyRoot.room.values()) {
+    room.work();
+  }
 };
